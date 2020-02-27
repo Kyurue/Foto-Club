@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" style=""></script>
     <!-- Fonts -->
     <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="theme.css" type="text/css">
@@ -43,6 +44,7 @@
           </li>
         @endif
         @else
+        <li class="nav-item"> <a class="nav-link" href="#">upload photo</a> </li>
           <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -70,10 +72,48 @@
       </div>
     </div>
   </nav>
-
         <main>
             @yield('content')
         </main>
     </div>
 </body>
+<footer class="footer">
+  <div class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="p-4 col-md-3">
+          <h2 class="text-left text-capitalize text-white">Pingendo</h2>
+          <p class="text-left text-capitalize text-white">A company for whatever you may need, from website prototyping to publishing</p>
+        </div>
+        <div class="p-4 col-md-3">
+          <h2 class="text-left text-capitalize text-white">Mapsite</h2>
+          <ul class="list-unstyled"> <a href="#" class="text-left text-capitalize text-white">Home</a> <br> <a href="#" class="text-left text-capitalize text-white">About us</a> <br> <a href="#" class="text-left text-capitalize text-white">Our services</a> <br> <a href="#" class="text-left text-capitalize text-white">Stories</a> </ul>
+        </div>
+        <div class="p-4 col-md-3">
+          <h2 class="text-left text-capitalize text-white">Contact</h2>
+          <p> <a href="#" class="text-left text-capitalize text-white">
+              <i class="fa d-inline mr-3 text-muted fa-phone"></i>+246 - 542 550 5462</a> </p>
+          <p> <a href="#" class="text-left text-capitalize text-white">
+              <i class="fa d-inline mr-3 text-muted fa-envelope-o"></i>info@pingendo.com</a> </p>
+          <p> <a href="#" class="text-left text-capitalize text-white">
+              <i class="fa d-inline mr-3 fa-map-marker text-muted"></i>365 Park Street, NY</a> </p>
+        </div>
+        <div class="p-4 col-md-3">
+          <h2 class="text-left text-capitalize text-white">Subscribe</h2>
+          <form>
+            <fieldset class="form-group"> <label class="text-left text-capitalize text-white" for="exampleInputEmail1">Get our newsletter</label> <input type="email" class="form-control" placeholder="Enter email"> </fieldset> <button type="submit" class="btn btn-outline-dark">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <p class="text-center">© Copyright 2018 Pingendo - All rights reserved. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</footer>
 </html>
