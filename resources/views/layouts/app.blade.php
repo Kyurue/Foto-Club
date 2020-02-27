@@ -56,7 +56,7 @@
                 document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="Profile">
                 Profiel Pagina
                 </a>
 
