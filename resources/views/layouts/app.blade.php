@@ -25,7 +25,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar12"> <a class="navbar-brand d-none d-md-block" href="#">
-          <b style="" class="text-left text-capitalize text-white"> FotoSite</b>
+          <b style="" class="text-left text-capitalize text-white"> FotoClub</b>
         </a>
         <form class="form-inline my-lg-0 pl-0"> <input class="form-control mr-sm-2 px-5 text-center" type="text" placeholder="Vul iets in om te zoeken"> <button class="btn btn-outline-success my-2 my-sm-0" type="submit">zoek</button> </form>
         <ul class="navbar-nav mx-auto">
@@ -82,32 +82,32 @@
     <div class="container">
       <div class="row">
         <div class="p-4 col-md-3">
-          <h2 class="text-left text-capitalize text-white">Pingendo</h2>
-          <p class="text-left text-capitalize text-white">A company for whatever you may need, from website prototyping to publishing</p>
+          <h2 class="text-left text-capitalize text-white">FotoClub</h2>
+          <p class="text-left text-capitalize text-white">placeholder</p>
         </div>
         <div class="p-4 col-md-3">
           <h2 class="text-left text-capitalize text-white">Mapsite</h2>
-          <ul class="list-unstyled"> <a href="#" class="text-left text-capitalize text-white">Home</a> <br> <a href="#" class="text-left text-capitalize text-white">About us</a> <br> <a href="#" class="text-left text-capitalize text-white">Our services</a> <br> <a href="#" class="text-left text-capitalize text-white">Stories</a> </ul>
+          <ul class="list-unstyled"> <a href="#" class="text-left text-capitalize text-white">placeholder</a> <br> <a href="#" class="text-left text-capitalize text-white">placeholder</a> <br> <a href="#" class="text-left text-capitalize text-white">placeholder</a> <br> <a href="#" class="text-left text-capitalize text-white">placeholder</a> </ul>
         </div>
         <div class="p-4 col-md-3">
           <h2 class="text-left text-capitalize text-white">Contact</h2>
           <p> <a href="#" class="text-left text-capitalize text-white">
-              <i class="fa d-inline mr-3 text-muted fa-phone"></i>+246 - 542 550 5462</a> </p>
+              <i class="fa d-inline mr-3 text-muted fa-phone"></i>placeholder</a> </p>
           <p> <a href="#" class="text-left text-capitalize text-white">
-              <i class="fa d-inline mr-3 text-muted fa-envelope-o"></i>info@pingendo.com</a> </p>
+              <i class="fa d-inline mr-3 text-muted fa-envelope-o"></i>placeholder</a> </p>
           <p> <a href="#" class="text-left text-capitalize text-white">
-              <i class="fa d-inline mr-3 fa-map-marker text-muted"></i>365 Park Street, NY</a> </p>
+              <i class="fa d-inline mr-3 fa-map-marker text-muted"></i>placeholder</a> </p>
         </div>
         <div class="p-4 col-md-3">
           <h2 class="text-left text-capitalize text-white">Subscribe</h2>
           <form>
-            <fieldset class="form-group"> <label class="text-left text-capitalize text-white" for="exampleInputEmail1">Get our newsletter</label> <input type="email" class="form-control" placeholder="Enter email"> </fieldset> <button type="submit" class="btn btn-outline-dark">Submit</button>
+            <fieldset class="form-group"> <label class="text-left text-capitalize text-white" for="exampleInputEmail1">placeholder</label> <input type="email" class="form-control" placeholder="Enter email"> </fieldset> <button type="submit" class="btn btn-outline-dark">Submit</button>
           </form>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 mt-3">
-          <p class="text-center">© Copyright 2018 Pingendo - All rights reserved. </p>
+          <p class="text-center">© Copyright 2018 Fotoclub - All rights reserved. </p>
         </div>
       </div>
     </div>

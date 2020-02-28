@@ -11,11 +11,11 @@
 }
 .main {
   width: 70%;
-  height: 150vh;
+  height: 120vh;
 }
 .sidebar {
   width: 29%;
-  height: 25vh;
+  height: 50vh;
 }
 .sidebar {
   position: -webkit-sticky;
