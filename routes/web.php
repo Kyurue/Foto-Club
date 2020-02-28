@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/panel', function() {
+    return view('dashboard');
+});
+
 Route::get('/uploadfoto', function () {
     return view('uploadfoto');
 });
