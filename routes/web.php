@@ -16,7 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/panel', function() {
-    return view('dashboard');
+    return view('layouts.dashboard');
+});
+
+Route::get('/panel/users', function() {
+    return view('panel.users');
 });
 
 Route::get('/uploadfoto', function () {
