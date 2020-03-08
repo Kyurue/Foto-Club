@@ -15,14 +15,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/panel', function() {
-    return view('layouts.dashboard');
-});
-
-Route::get('/panel/users', function() {
-    return view('panel.users');
-});
-
 Route::get('/uploadfoto', function () {
     return view('uploadfoto');
 });
@@ -31,6 +23,17 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['auth', 'admin']], function() {
+
+    Route::get('/panel', function() {
+        return view('layouts.dashboard');
+    });
+    
+    Route::get('/panel/users', function() {
+        return view('panel.users');
+    });
+});
+
