@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/uploadfoto', function () {
+Route::get('/uploadfoto', 'FormController@index');
+Route::post('upload_data', 'FormController@store');
+/*Route::get('/uploadfoto', function () {
     return view('uploadfoto');
-});
+});*/
 
 Route::get('/profile', function () {
     return view('profile');
@@ -36,4 +38,3 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
         return view('panel.users');
     });
 });
-
