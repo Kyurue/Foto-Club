@@ -17,11 +17,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
+<<<<<<< Updated upstream
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+/*Route::get('/uploadfoto', function () {
+    return view('uploadfoto');
+});*/
+>>>>>>> Stashed changes
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/uploadfoto', 'FormController@index');
+Route::post('upload_data', 'FormController@store');
 
 Auth::routes();
 
