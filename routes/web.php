@@ -32,8 +32,6 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
         return view('layouts.dashboard');
     });
     
-    Route::get('/panel/users', function() {
-        return view('panel.users');
-    });
+    Route::get('/panel/users/{id}', 'userController@deleteUser');
+    Route::get('/panel/users','userController@getUsers');
 });
-
