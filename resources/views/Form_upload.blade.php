@@ -66,9 +66,10 @@
                             <div class="col-md-6">
                                 <select>
                                     <option>Natuur</option>
-                                    <option>Mode</option>
-                                    <option>Games</option>
-                                    <option>Meme</option>
+                                    <option>Muziek</option>
+                                    <option>Gebouwen</option>
+                                    <option>landen</option>
+                                    <option>Ruimte</option>
                                 </select>
                                 <!-- <input id="Categorie" type="text" class="form-control @error('Categorie') is-invalid @enderror" name="Categorie"> -->
                             </div>

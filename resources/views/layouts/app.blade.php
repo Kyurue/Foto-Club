@@ -17,6 +17,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="theme.css" type="text/css">
+    <script src="https://kit.fontawesome.com/642ec4bc32.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app">
@@ -24,7 +25,7 @@
     <div class="container"> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar12">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar12"> <a class="navbar-brand d-none d-md-block" href="#">
+      <div class="collapse navbar-collapse" id="navbar12"> <a class="navbar-brand d-none d-md-block" href="/home">
           <b style="" class="text-left text-capitalize text-white"> FotoClub</b>
         </a>
         <form class="form-inline my-lg-0 pl-0"> <input class="form-control mr-sm-2 px-5 text-center" type="text" placeholder="Vul iets in om te zoeken"> <button class="btn btn-outline-success my-2 my-sm-0" type="submit">zoek</button> </form>
@@ -51,13 +52,13 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="profile">
+                Profiel Pagina
+                </a>
                 <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
-                </a>
-                <a class="dropdown-item" href="profile">
-                Profiel Pagina
                 </a>
                 <?php if(Auth::user()->role == 'admin') : ?> 
                 <a class="dropdown-item" href="panel">admin panel</a>

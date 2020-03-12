@@ -14,6 +14,12 @@ class FormController extends Controller
     public function index()
     {
         $data = FormMultipleUpload::all();
+        return view ('home');
+    }
+
+    public function formUpload()
+    {
+        $data = FormMultipleUpload::all();
         return view ('form_upload', compact('data'));
     }
 
