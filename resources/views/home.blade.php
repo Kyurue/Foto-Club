@@ -6,7 +6,7 @@
   flex-wrap: wrap;
 }
 
-.flex-container > div {
+.flex-container > a {
   background-color: #d5d5d5;
   width: 22.5%;
   height: 200px;
@@ -41,12 +41,13 @@
   <div class="flex-container">
     @foreach($data as $image)
         <?php foreach (json_decode($image->filename)as $picture) { ?>
-            <div>
+            <a href="photo"> 
               <img src="{{ asset('/image/'.$picture) }}" style="margin:10px auto 20px; object-fit:cover; height:180px; width:300px"/>
-            </div>
+            </a>
         <?php } ?>
      @endforeach
      </div>
   </div>
 </body>
 @endsection
+<!-- <?=$picture?> -->

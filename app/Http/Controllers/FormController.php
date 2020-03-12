@@ -15,8 +15,11 @@ class FormController extends Controller
      */
     public function index()
     {
+        // $user = Auth::user();
+        // if($user->leeftijd == $data->leeftijdsverificatie && $user->leeftijd == "true") {
         $data = FormMultipleUpload::all();
         return view('home', compact('data'));
+        // }
     }
 
     public function formUpload()

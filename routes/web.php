@@ -27,11 +27,16 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'FormController@index');
 
+Route::get('/photo', function() {
+    return view('photo');
+});
+
 Route::group(['middleware' => ['auth', 'admin']], function() {
 
     Route::get('/panel', function() {
         return view('layouts.dashboard');
     });
+
     
     Route::get('/panel/users/{id}', 'userController@deleteUser');
     Route::get('/panel/users','userController@getUsers');

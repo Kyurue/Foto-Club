@@ -26,6 +26,17 @@
                                 @enderror
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label for="leeftijd" class="col-md-4 col-form-label text-md-right">{{ __('leeftijd') }}</label>
+
+                            <div class="col-md-6">
+                            <input type="radio" name="leeftijd" id="leeftijd" value="true">
+                            <label for="leeftijd">21+</label>
+                            <input type="radio" name="leeftijd" id="leeftijd" value="false">
+                            <label for="leeftijd">20/jonger</label>
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -40,6 +51,7 @@
                                 @enderror
                             </div>
                         </div>
+
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
