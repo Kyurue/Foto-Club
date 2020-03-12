@@ -59,7 +59,9 @@
                 <a class="dropdown-item" href="profile">
                 Profiel Pagina
                 </a>
-
+                <?php if(Auth::user()->role == 'admin') : ?> 
+                <a class="dropdown-item" href="panel">admin panel</a>
+                <?php endif; ?>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
