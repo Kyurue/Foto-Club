@@ -39,58 +39,50 @@
 <form method="post" action="{{url('upload_data')}}" enctype="multipart/form-data">
   {{csrf_field()}}
   <div class="form-group row">
-                            <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Titel') }}</label>
+                            <label for="titel" class="col-md-4 col-form-label text-md-right">{{ __('titel') }}</label>
 
                             <div class="col-md-6">
-                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
+                                <input id="titel" type="text" class="form-control @error('titel') is-invalid @enderror" name="titel" value="{{ old('titel') }}" required autocomplete="titel" autofocus>
 
-                                @error('title')
+                                @error('titel')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>oof</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Omschrijving') }}</label>
+                            <label for="omschrijving" class="col-md-4 col-form-label text-md-right">{{ __('omschrijving') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="description" type="text" maxlength="225" class="form-control @error('description') is-invalid @enderror" name="description"></textarea>
+                                <textarea id="omschrijving" type="text" maxlength="225" class="form-control @error('omschrijving') is-invalid @enderror" name="omschrijving"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="Categorie" class="col-md-4 col-form-label text-md-right">{{ __('Categorie') }}</label>
+                            <label for="categorie" class="col-md-4 col-form-label text-md-right">{{ __('categorie') }}</label>
 
                             <div class="col-md-6">
-                                <select>
-                                    <option>Natuur</option>
-                                    <option>Muziek</option>
-                                    <option>Gebouwen</option>
-                                    <option>landen</option>
-                                    <option>Ruimte</option>
+                                <select name="categorie" id="categorie">
+                                    <option value="natuur">Natuur</option>
+                                    <option value="muziek">Muziek</option>
+                                    <option value="gebouwen">Gebouwen</option>
+                                    <option value="landen">landen</option>
+                                    <option value="ruimte">Ruimte</option>
                                 </select>
                                 <!-- <input id="Categorie" type="text" class="form-control @error('Categorie') is-invalid @enderror" name="Categorie"> -->
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="Leeftijdscategorie" class="col-md-4 col-form-label text-md-right">{{ __('Leeftijd') }}</label>
+                            <label for="leeftijd" class="col-md-4 col-form-label text-md-right">{{ __('leeftijd') }}</label>
 
                             <div class="col-md-6">
-                            <input type="radio" name="Leeftijd" id="Leeftijd21" value="true">
-                            <label for="Leeftijd21">21+</label>
-                            <input type="radio" name="Leeftijd" id="Leeftijd20" value="false">
-                            <label for=":eeftijd20">20/ jonger</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Keywords') }}</label>
-
-                            <div class="col-md-6">
-                                <textarea id="Keywords" type="text" class="form-control @error('Keywords') is-invalid @enderror" name="Keywords" ></textarea>
+                            <input type="radio" name="leeftijd" id="leeftijd" value="true">
+                            <label for="leeftijd">21+</label>
+                            <input type="radio" name="leeftijd" id="leeftijd" value="false">
+                            <label for="leeftijd">20/jonger</label>
                             </div>
                         </div>
   
@@ -110,26 +102,6 @@
         </div>
         <button type="submit" class="btn btn-info" style="margin-top:12px"><i class="glyphicon glyphicon-check"></i> Submit</button>
   </form>
-   <br><hr>
-
-   <h4><i class="glyphicon glyphicon-picture"></i> Display Data Image    </h4>
-   <table class="table table-bordered table-hover table-striped">
-    <thead>
-    <tr><th>#</th>
-        <th>Picture</th>
-    </tr>
-    </thead>
-    <tbody>
-        @foreach($data as $image)
-       <tr><td>{{$image->id}}</td>
-           <td> <?php foreach (json_decode($image->filename)as $picture) { ?>
-                 <img src="{{ asset('/image/'.$picture) }}" style="height:120px; width:200px"/>
-                <?php } ?>
-           </td>
-      </tr>
-        @endforeach
-    </tbody>
-   </table>
 
   </div>
 

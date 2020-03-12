@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\FormMultipleUpload;
+use Auth;
+use App\Http\Controllers\Controller;
 
 class FormController extends Controller
 {
@@ -14,7 +16,7 @@ class FormController extends Controller
     public function index()
     {
         $data = FormMultipleUpload::all();
-        return view ('home');
+        return view('home', compact('data'));
     }
 
     public function formUpload()
@@ -55,8 +57,13 @@ class FormController extends Controller
                 $data[] = $name;  
             }
         }
-        
+        $user = Auth::user();
         $Upload_model = new FormMultipleUpload;
+        $Upload_model->UserId = $user->id;
+        $Upload_model->titel = request('titel');
+        $Upload_model->omschrijving = request('omschrijving');
+        $Upload_model->categorie = request('categorie');
+        $Upload_model->leeftijdverificatie = request('leeftijd');
         $Upload_model->filename = json_encode($data);
         $Upload_model->save();
         return back()->with('success', 'Your images has been upload successfully');
