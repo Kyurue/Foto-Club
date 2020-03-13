@@ -22,7 +22,7 @@
         <ul class="list-unstyled">
             <li><a href="#" class="margin">Home</a></li>
             <li><a href="{{ url('/panel/users') }}" class="margin">Gebruikers</a></li>
-            <li><a href="#" class="margin">Pagina's</a></li>
+            <li><a href="{{ url('/panel/fotos') }}" class="margin">Foto's</a></li>
             <li><a href="#" class="margin">Instellingen</a></li>
         </ul>
     </div>

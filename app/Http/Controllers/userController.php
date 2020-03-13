@@ -9,12 +9,19 @@ use DB;
 use App\Http\Requests;
 use App\remove;
 use App\User;
+use App\removeFoto;
+use App\fotos;
 
 class userController extends Controller
 {
     public function getUsers() {
         $users = DB::select('select * from users');
         return view('panel.users',['users'=>$users]);
+    }
+
+    public function getFoto() {
+        $form_multiple_upload = DB::select('select * from form_multiple_upload');
+        return view('panel.fotos',['form_multiple_upload'=>$form_multiple_upload]);
     }
 
     public function profile(){
@@ -52,6 +59,13 @@ class userController extends Controller
             $user->destroy($id);
         }
         return redirect( url('/panel/users'));
+      }
+    
+    public function deleteFoto($id=0){
+
+        $form_multiple_upload = DB::select('select * from form_multiple_upload');
+        $form_multiple_upload->destroy($id);
+        return redirect( url('/panel/fotos'));
       }
 }
 

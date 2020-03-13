@@ -40,4 +40,7 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
     
     Route::get('/panel/users/{id}', 'userController@deleteUser');
     Route::get('/panel/users','userController@getUsers');
+
+    Route::get('/panel/foto/{id}', 'userController@deleteFoto');
+    Route::get('/panel/fotos','userController@getFoto');
 });
