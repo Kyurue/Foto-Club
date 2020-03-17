@@ -20,10 +20,9 @@
 <div class="d-flex">
     <div class="sidebar sidebar-dark bg-dark">
         <ul class="list-unstyled">
-            <li><a href="#" class="margin">Home</a></li>
+            <li><a href="../home" class="margin">Home</a></li>
             <li><a href="{{ url('/panel/users') }}" class="margin">Gebruikers</a></li>
             <li><a href="{{ url('/panel/fotos') }}" class="margin">Foto's</a></li>
-            <li><a href="#" class="margin">Instellingen</a></li>
         </ul>
     </div>
         <main class="main">

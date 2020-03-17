@@ -28,11 +28,18 @@
           <p class="mb-4">Dagelijks krijgen wij aanmeldingen van mensen die hun foto's aan de wereld willen laten zien. wilt u eventueel ook uw talent laten zien registreer dan nu op onze site! het is gratis en zeker het proberen waard!</p> <a class="btn btn-outline-primary" href="register">Registreer nu!</a>
         </div>
         @else
+        <?php if(Auth::user()->user_approved == 'true') : ?>
         <div class="bg-white p-5 mx-auto col-md-8 col-10">
           <h3 class="display-3">Upload nu uw Foto's!</h3>
           <p class="mb-3 lead">Wilt u graag uw fotografische talent laten zien? Druk dan op de knop hieronder!</p>
           <p class="mb-4"></p> <a class="btn btn-outline-primary" href="uploadfoto">Upload foto!</a>
         </div>
+        <?php else : ?>
+          <div class="bg-white p-5 mx-auto col-md-8 col-10">
+          <h3 class="display-3">Uw account is nog niet geverifieerd!</h3>
+          <p class="mb-3 lead">Binnen nu en een paar dagen zal de beheerder u toegang verlenen</p>
+        </div>
+        <?php endif; ?>
         @endguest
       </div>
     </div>
@@ -50,4 +57,3 @@
   </div>
 </body>
 @endsection
-<!-- <?=$picture?> -->

@@ -18,7 +18,7 @@
                 <th scope="row">{{$user->id}}</th>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
-                <td><select><option value="{{$user->role}}">{{$user->role}}</option></select></td>
+                <td><select><option value="gebruiker">gebruiker</option><option value="admin">admin</option></select></td>
                 <td><button class="btn btn-danger"><a class="confirmation" href='/panel/users/{{ $user->id }}'>Delete</a></button></td>
             </tr>
             @endforeach
